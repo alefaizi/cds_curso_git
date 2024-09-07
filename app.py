@@ -38,8 +38,8 @@ def create_dataframe_section(df):
 
 def create_answers_section(df):
     st.title("Main Questions Answers")
-
     st.header("First Round")
+
     st.subheader("How many bikes are beign sold by their owners and how many bikes are beign sold by distributors?")
 
     st.subheader("How many bikes are beign sold are bikes from a unique owner?")
@@ -64,9 +64,11 @@ def create_answers_section(df):
 def main():
     df_raw = load_data()
 
-    create_dataframe_section(df_raw)
+    create_dataframe_section(df)
+
+    create_answers_section(df)
     
-    st.dataframe(df_raw)
+    st.dataframe(df)
 
 if __name__ == 'main':
     main()
